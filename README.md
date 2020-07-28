@@ -1,3 +1,14 @@
+# NPC Card Deck
+This project was developed for use in tabletop RPG games.
+
+## Adding Cards
+Click on the large plus sign in the upper left of the screen. This will generate a new card. Click on any text to edit, click off or hit enter to save. 
+
+## Saving
+Not enabled yet. Local storage will be enabled for offline use. 
+
+-------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

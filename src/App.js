@@ -1,24 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Card from './Card'
+
 import './App.css';
 
+
+
 function App() {
+  const [cardDeck, setCardDeck] = useState([])
+
+  let data = [
+    {
+      "name": "Ellie",
+      "voice": "loud and wild", 
+      "role":"Smuggler", 
+      "who":"she/her saytr",
+      "notes":"Offered to help for 40% cut"
+    }
+  ]
+
+  useEffect(()=>
+  {
+    setCardDeck(data)
+  },[])
+
+ 
+  const makeNew=()=>{
+    let newThing = {
+      "name": "Name",
+      "voice": "Voice",
+      "role":"Role",
+      "who":"Who",
+      "notes":"Notes"
+    }
+    setCardDeck(cardDeck=>[...cardDeck, newThing])
+  }
+console.log(JSON.stringify(cardDeck))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card-container">
+        <div className="card make-new" onClick={()=>makeNew()}>+</div>
+        
+        {cardDeck.map((cardInfo, index)=>(
+          
+          <Card key={index} index={index} info={cardInfo} />
+        ))}
+
+      </div>
     </div>
   );
 }
