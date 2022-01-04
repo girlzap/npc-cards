@@ -1,68 +1,73 @@
 .App {
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:#201f22;
-    color:white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #191919;
+  color: white;
 }
 
-.card-container{
-    display:flex;
-    height:calc(100% - 20px);
-    width:calc(100% - 20px);
-    /* border:1px solid red; */
-    overflow:auto;
-    padding:10px;
-    flex-wrap:wrap;
-    justify-content: center;
-    align-content: flex-start;
+.card-container {
+  display: flex;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  overflow: auto;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .card {
-    height:350px;
-    min-width:225px;
-    max-width:225px;
-    background-color:#fff;
-    color:#414141;
-    border-radius:10px;
-    margin:0 20px 20px 0;
-    padding:20px;
-    box-shadow: inset -1px -1px 3px #c7c7c7;
+  height: 350px;
+  min-width: 225px;
+  max-width: 225px;
+  background-color: #fff;
+  color: #414141;
+  border-radius: 10px;
+  margin: 0 20px 20px 0;
+  padding: 20px;
+  box-shadow: inset -1px -1px 3px #c7c7c7;
 }
 
-.card.make-new{
-    background-color:rgba(0,0,0,0.25);
-    text-align:center;
-    color:rgba(0,0,0,0.25);
-    font-weight:700;
-    font-size:200px;
-    cursor:pointer;
-    user-select:none;
-    box-shadow: none;
+.card.make-new {
+  background-color: #333842;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none;
 }
 
-.card.make-new:active{
-    background-color:rgba(0,0,0,0.5);
+.new-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: normal;
 }
 
-.card > .name{
-    font-weight:700;
-    font-size:1.2em;
+.card.make-new:active {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.card > .voice{
-    color:#005baf;
-    font-style: italic;
-    font-weight:500;
+.card > .name {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.card > .voice {
+  color: #005baf;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .card > .role {
-    color:#00af17;
+  color: #00af17;
 }
 
 .card > .who {
-    color:#af0043;
-    font-size:.9em;
+  color: #af0043;
+  font-size: 0.9em;
 }
